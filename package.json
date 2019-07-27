@@ -2,7 +2,7 @@
   "name": "auto-chem",
   "version": "1.0.0",
   "description": "Um software de desenho de estrutura quimica",
-  "main": "main.js",
+  "main": "app/main.js",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "fontawesome": "^5.6.3",
