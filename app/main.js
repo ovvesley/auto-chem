@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require('electron')
-
-let win
+require('electron-reload')(__dirname, {
+    electron: require(`${__dirname}/../node_modules/electron`)
+});
+let win;
 
 function createWindow() {
     win = new BrowserWindow({
@@ -9,25 +11,25 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true
         }
-    })
+    });
+    win.loadFile('app/index.html');
 
-
-    win.loadFile('app/index.html')
-
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
 
     win.on('closed', () => {
         win = null
-    })
+    });
+
+
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
-})
+});
 
 app.on('activate', () => {
     if (win === null) {

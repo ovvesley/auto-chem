@@ -10,7 +10,8 @@
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
-    "electron": "^5.0.8"
+    "electron": "^5.0.8",
+    "electron-reload": "^1.4.1"
   },
   "scripts": {
     "start": "electron ."
