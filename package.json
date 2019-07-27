@@ -1,0 +1,28 @@
+{
+  "name": "auto-chem",
+  "version": "1.0.0",
+  "description": "Um software de desenho de estrutura quimica",
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "electron": "^5.0.8"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvesly/auto-chem.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvesly/auto-chem/issues"
+  },
+  "homepage": "https://github.com/vvesly/auto-chem#readme"
+}
