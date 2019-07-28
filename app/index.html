@@ -17,40 +17,31 @@
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav mx-auto">
-      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none">/</button>
-      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none">//</button>
-      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none">///</button>
+      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none" id="btnSimple">/</button>
+      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none" id="btnDupla">//</button>
+      <button class="nav-item nav-link btn" style="width: 50px; height: 50px; border:none" id="btnTripla">///</button>
       <div class="dropdown">
         <button class="nav-item nav-link btn" type="button" id="dropdownMenu1" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" style="width: 50px; height: 50px; border:none">C</button>
         <div class="dropdown-menu ">
           <div class="row">
-            <div class="col-12" style="width:600px">
+            <div class="col-12" style="width:280px">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="row" class="btn" style="width: 50px; height: 50px; border:none ">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
-                    <th class="btn" style="width: 50px; height: 50px; border:none">td</th>
+                    <th scope="row" class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none;">H</th>
+                    <th class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">F</th>
+                    <th class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">O</th>
+                    <th class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">C</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="row" class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
-                    <td class="btn" style="width: 50px; height: 50px; border:none">td</td>
+                    <td scope="row" class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">X</td>
+                    <td class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">X</td>
+                    <td class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">X</td>
+                    <td class="btn btnElementQuimic" style="width: 50px; height: 50px; border:none">X</td>
+
                   </tr>
 
                 </tbody>
@@ -59,17 +50,25 @@
 
           </div>
 
-
-          <!-- 
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
       </div>
     </div>
 
   </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mt-2">
+        <canvas id="canvas" width="600px" height="400" style="border: 1px solid ";>
+
+        </canvas>
+      </div>
+
+    </div>
+
+
+
+  </div>
 
 
 
