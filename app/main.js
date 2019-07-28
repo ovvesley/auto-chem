@@ -1,38 +1,38 @@
-const { app, BrowserWindow } = require('electron')
+"use strict";
+
+var _require = require('electron'),
+    app = _require.app,
+    BrowserWindow = _require.BrowserWindow;
+
 require('electron-reload')(__dirname, {
-    electron: require(`${__dirname}/../node_modules/electron`)
+  electron: require("".concat(__dirname, "/../node_modules/electron"))
 });
-let win;
+
+var win;
 
 function createWindow() {
-    win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-    win.loadFile('app/index.html');
-
-    win.webContents.openDevTools();
-
-    win.on('closed', () => {
-        win = null
-    });
-
-
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+  win.loadFile('app/index.html');
+  win.webContents.openDevTools();
+  win.on('closed', function () {
+    win = null;
+  });
 }
 
 app.on('ready', createWindow);
-
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });
-
-app.on('activate', () => {
-    if (win === null) {
-        createWindow()
-    }
-})
+app.on('activate', function () {
+  if (win === null) {
+    createWindow();
+  }
+});
