@@ -12,17 +12,34 @@
 <script>
   window.$ = window.jQuery = require('jquery');
 </script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    button{
+      font-family: 'Righteous', cursive;
+
+    }
+    button:hover{
+      background-color:oldlace;
+      transform: scale(1.25);
+    }
+    .btElementQuimic{
+      font-family: 'Righteous', cursive;
+    }
+</style> 
 
 <body>
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav mx-auto">
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnSimple">/</button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnDupla">//</button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnTripla">///</button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnPointer"><img src="imgs/pointerIcon.png" alt=""></button>  
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnUndo"><img src="imgs/redoicon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnRedo"><img src="imgs/undoicon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnSimple">/</button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnDupla">//</button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnTripla">///</button>
       <div class="dropdown">
         <button class="nav-item nav-link btn" type="button" id="dropdownMenu1" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="width: 50px; height: 50px; border:none">C</button>
+          aria-haspopup="true" aria-expanded="false" style="width: 50px; height: 50px; border:none; font-size: 15px; ">C</button>
         <div class="dropdown-menu ">
           <div class="row">
             <div class="col-12" style="width:280px">
@@ -52,8 +69,8 @@
 
         </div>
       </div>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnEraser"><img src="imgs/eraserIcon.png" alt=""></button>
     </div>
-
   </nav>
 
 
