@@ -1,6 +1,6 @@
 'use strict';
 import MouseAction from "./scripts/components/MouseAction";
-import { drawSimple, drawDupla, drawTripla } from './scripts/functions/ligacoes';
+import { drawSimple, drawDuo, drawTriple } from './scripts/functions/ligacoes';
 let mouse = new MouseAction();
 $(".btn-toolbar").click(function(){
     mouse.click(this.id);
@@ -12,11 +12,11 @@ $("#canvas").click(function(event){
     if (mouse.currentClick == "btnSimple"){       
         drawSimple(ctx, event.offsetX, event.offsetY);
     }
-    if (mouse.currentClick == "btnDupla"){
-        drawDupla(ctx, event.offsetX, event.offsetY);
+    if (mouse.currentClick == "btnDuo"){
+        drawDuo(ctx, event.offsetX, event.offsetY);
     }
-    if (mouse.currentClick == "btnTripla"){
-        drawTripla(ctx, event.offsetX, event.offsetY);
+    if (mouse.currentClick == "btnTriple"){
+        drawTriple(ctx, event.offsetX, event.offsetY);
     }    
 });
 

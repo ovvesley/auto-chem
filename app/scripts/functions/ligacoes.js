@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.drawSimple = drawSimple;
-exports.drawTripla = drawTripla;
-exports.drawDupla = drawDupla;
+exports.drawTriple = drawTriple;
+exports.drawDuo = drawDuo;
 
 function drawSimple(ctx, valorX, valorY) {
   ctx.beginPath();
@@ -15,7 +15,7 @@ function drawSimple(ctx, valorX, valorY) {
   ctx.restore();
 }
 
-function drawTripla(ctx, valorX, valorY) {
+function drawTriple(ctx, valorX, valorY) {
   ctx.beginPath();
   ctx.moveTo(valorX, valorY);
   ctx.lineTo(valorX + 100, valorY);
@@ -31,7 +31,7 @@ function drawTripla(ctx, valorX, valorY) {
   ctx.restore();
 }
 
-function drawDupla(ctx, valorX, valorY) {
+function drawDuo(ctx, valorX, valorY) {
   ctx.beginPath();
   ctx.moveTo(valorX, valorY);
   ctx.lineTo(valorX + 100, valorY);

@@ -7,7 +7,7 @@ export function drawSimple(ctx,valorX,valorY){
     ctx.restore();
 }
 
-export function drawTripla(ctx,valorX,valorY){    
+export function drawTriple(ctx,valorX,valorY){    
     ctx.beginPath() 
     ctx.moveTo(valorX,valorY);
     ctx.lineTo(valorX + 100,valorY);
@@ -22,7 +22,7 @@ export function drawTripla(ctx,valorX,valorY){
     ctx.stroke();
     ctx.restore();
 }
-export function drawDupla(ctx,valorX,valorY){     
+export function drawDuo(ctx,valorX,valorY){     
         ctx.beginPath()
         ctx.moveTo(valorX,valorY);
         ctx.lineTo(valorX + 100,valorY);

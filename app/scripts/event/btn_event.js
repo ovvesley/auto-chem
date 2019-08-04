@@ -18,11 +18,11 @@ $("#canvas").click(function (event) {
     (0, _ligacoes.drawSimple)(ctx, event.offsetX, event.offsetY);
   }
 
-  if (mouse.currentClick == "btnDupla") {
-    (0, _ligacoes.drawDupla)(ctx, event.offsetX, event.offsetY);
+  if (mouse.currentClick == "btnDuo") {
+    (0, _ligacoes.drawDuo)(ctx, event.offsetX, event.offsetY);
   }
 
-  if (mouse.currentClick == "btnTripla") {
-    (0, _ligacoes.drawTripla)(ctx, event.offsetX, event.offsetY);
+  if (mouse.currentClick == "btnTriple") {
+    (0, _ligacoes.drawTriple)(ctx, event.offsetX, event.offsetY);
   }
 });
