@@ -10,5 +10,4 @@ export default class MouseAction{
         this.historyClick.unshift(btn);
         this.currentClick = btn;
     };
-
 }

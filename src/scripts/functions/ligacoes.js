@@ -1,6 +1,6 @@
 'use strict'
 export function drawSimple(ctx,valorX,valorY){ 
-    ctx.beginPath()    
+    ctx.beginPath();    
     ctx.moveTo(valorX,valorY);
     ctx.lineTo(valorX + 100,valorY);
     ctx.stroke();
