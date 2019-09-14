@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.drawSimple = drawSimple;
 exports.drawTriple = drawTriple;
 exports.drawDuo = drawDuo;
+exports.butano = butano;
 
 function drawSimple(ctx, valorX, valorY) {
   ctx.beginPath();
@@ -42,3 +43,5 @@ function drawDuo(ctx, valorX, valorY) {
   ctx.stroke();
   ctx.restore();
 }
+
+function butano() {}

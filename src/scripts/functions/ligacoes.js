@@ -33,3 +33,8 @@ export function drawDuo(ctx,valorX,valorY){
         ctx.stroke();
         ctx.restore();
 }
+
+
+export function butano() {
+    
+}
