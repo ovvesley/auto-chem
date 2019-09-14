@@ -7,8 +7,9 @@ export function drawSimple(ctx,valorX,valorY){
     ctx.restore();
 }
 
+
 export function drawTriple(ctx,valorX,valorY){    
-    ctx.beginPath() 
+    ctx.beginPath(); 
     ctx.moveTo(valorX,valorY);
     ctx.lineTo(valorX + 100,valorY);
     ctx.stroke();
@@ -22,6 +23,8 @@ export function drawTriple(ctx,valorX,valorY){
     ctx.stroke();
     ctx.restore();
 }
+
+
 export function drawDuo(ctx,valorX,valorY){     
         ctx.beginPath()
         ctx.moveTo(valorX,valorY);
@@ -35,6 +38,15 @@ export function drawDuo(ctx,valorX,valorY){
 }
 
 
-export function butano() {
-    
+export function drawButane(ctx, x, y) {
+    ctx.beginPath();
+
+    ctx.rect(x, y, 60, 60);
+
+    ctx.stroke();
+    ctx.closePath();
+}
+
+export function erase(ctx) {
+    ctx.clearRect(0, 0, 800, 600);
 }

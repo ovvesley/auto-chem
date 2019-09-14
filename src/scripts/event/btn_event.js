@@ -1,6 +1,6 @@
 'use strict';
 import MouseAction from "./scripts/components/MouseAction";
-import { drawSimple, drawDuo, drawTriple } from './scripts/functions/ligacoes';
+import { drawSimple, drawDuo, drawTriple, drawButane, erase } from './scripts/functions/ligacoes';
 
 let mouse = new MouseAction();
 let ctx = $("#canvas")[0].getContext('2d');
@@ -23,4 +23,10 @@ $("#canvas").click(function(event){
     else if (mouse.currentClick == "btnTriple"){
         drawTriple(ctx, event.offsetX, event.offsetY);
     } 
+    else if (mouse.currentClick == "butane") {
+        drawButane(ctx, event.offsetX, event.offsetY);
+    }
+    else if (mouse.currentClick == "btnEraser") {
+        erase(ctx);
+    }
 });
