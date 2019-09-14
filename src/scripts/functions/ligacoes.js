@@ -26,15 +26,15 @@ export function drawTriple(ctx,valorX,valorY){
 
 
 export function drawDuo(ctx,valorX,valorY){     
-        ctx.beginPath()
-        ctx.moveTo(valorX,valorY);
-        ctx.lineTo(valorX + 100,valorY);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(valorX,valorY+10);
-        ctx.lineTo(valorX + 100,valorY+10);
-        ctx.stroke();
-        ctx.restore();
+    ctx.beginPath()
+    ctx.moveTo(valorX,valorY);
+    ctx.lineTo(valorX + 100,valorY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(valorX,valorY+10);
+    ctx.lineTo(valorX + 100,valorY+10);
+    ctx.stroke();
+    ctx.restore();
 }
 
 
