@@ -21,7 +21,7 @@ $("#canvas").click(function (event) {
   } else if (mouse.currentClick == "btnTriple") {
     (0, _ligacoes.drawTriple)(ctx, event.offsetX, event.offsetY);
   } else if (mouse.currentClick == "butane") {
-    (0, _ligacoes.drawButane)(ctx, event.offsetX, event.offsetY);
+    (0, _ligacoes.drawCicloButane)(ctx, event.offsetX, event.offsetY);
   } else if (mouse.currentClick == "btnEraser") {
     (0, _ligacoes.erase)(ctx);
   }

@@ -38,7 +38,7 @@ export function drawDuo(ctx,valorX,valorY){
 }
 
 
-export function drawButane(ctx, x, y) {
+export function drawCicloButane(ctx, x, y) {
     ctx.beginPath();
 
     ctx.rect(x, y, 60, 60);
