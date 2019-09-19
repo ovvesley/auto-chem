@@ -21,6 +21,7 @@ function () {
     this.historyClick = new Array();
     this.currentClick;
     this.state;
+    this.connections = new Array();
   }
 
   _createClass(MouseAction, [{
@@ -28,6 +29,16 @@ function () {
     value: function click(btn) {
       this.historyClick.unshift(btn);
       this.currentClick = btn;
+    }
+  }, {
+    key: "saveConnections",
+    value: function saveConnections(name, x, y) {
+      this.connections.unshift({
+        name: name,
+        x: x,
+        y: y
+      });
+      console.log(this.connections);
     }
   }]);
 
