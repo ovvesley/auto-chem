@@ -29,6 +29,12 @@ $("#canvas").click(function (event) {
   } else if (mouse.currentClick == "butane") {
     (0, _ligacoes.drawCicloButane)(ctx, event.offsetX, event.offsetY);
     mouse.saveConnections("simple", event.offsetX, event.offsetY);
+  } else if (mouse.currentClick == "btnCycleHexan") {
+    (0, _ligacoes.drawCycleHexan)(ctx, event.offsetX, event.offsetY);
+    mouse.saveConnections("cycleHexan", event.offsetX, event.offsetY);
+  } else if (mouse.currentClick == "btnBenzene") {
+    (0, _ligacoes.drawBenzene)(ctx, event.offsetX, event.offsetY);
+    mouse.saveConnections("benzene", event.offsetX, event.offsetY);
   } else if (mouse.currentClick === "carbon") {
     (0, _ligacoes.drawCarbon)(ctx, event.offsetX, event.offsetY);
   } else if (mouse.currentClick == "btnEraser") {
