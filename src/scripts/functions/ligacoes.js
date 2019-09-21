@@ -52,11 +52,10 @@ export function erase(ctx) {
 }
 
 
-
 export function drawCarbon(ctx, x, y) {
     ctx.beginPath();
     //arc(x, y, ray, initialAngle, lastAngle);
-    ctx.arc(x, y, 10, 0, 2 * Math.PI);
+    ctx.arc(x, y, 5, 0, 2 * Math.PI);
     ctx.fillStyle = "#000000";
     ctx.fill();
     ctx.stroke();
