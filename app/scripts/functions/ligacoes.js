@@ -4,12 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.drawSimple = drawSimple;
+exports.drawTriple = drawTriple;
 exports.drawDuo = drawDuo;
 exports.drawCicloButane = drawCicloButane;
 exports.erase = erase;
 exports.drawCarbon = drawCarbon;
 exports.drawCycleHexan = drawCycleHexan;
-exports.drawBenzeno = drawBenzeno;
+exports.drawBenzene = drawBenzene;
 
 function drawSimple(ctx, valorX, valorY) {
   ctx.beginPath();
@@ -83,7 +84,7 @@ function drawCycleHexan(ctx, Xcenter, Ycenter) {
   ctx.stroke();
 }
 
-function drawBenzeno(ctx, Xcenter, Ycenter) {
+function drawBenzene(ctx, Xcenter, Ycenter) {
   var numberOfSides = 6,
       size = 40;
   ctx.beginPath();
