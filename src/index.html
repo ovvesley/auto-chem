@@ -13,41 +13,56 @@
   window.$ = window.jQuery = require('jquery');
 </script>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
-    button{
-      font-family: 'Righteous', cursive;
+  @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
-    }
-    button:hover{
-      background-color:oldlace;
-      transform: scale(1.25);
-    }
-    .btElementQuimic{
-      font-family: 'Righteous', cursive;
-    }
-</style> 
+  button {
+    font-family: 'Righteous', cursive;
+
+  }
+
+  
+
+  .btElementQuimic {
+    font-family: 'Righteous', cursive;
+  }
+</style>
 
 <body>
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav mx-auto">
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnPointer"><img src="imgs/pointerIcon.png" alt=""></button>  
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnUndo"><img src="imgs/redoicon.png" alt=""></button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnRedo"><img src="imgs/undoicon.png" alt=""></button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnSimple">/</button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnDuo">//</button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="btnTriple">///</button>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;" id="butane">[]</button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none"
+        id="btnPointer"><img src="imgs/pointerIcon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnUndo"><img
+          src="imgs/redoicon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnRedo"><img
+          src="imgs/undoicon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;"
+        id="btnSimple"> <img src="svg/single-bond.svg" alt="single-bond"> </button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;"
+        id="btnDuo"> <img src="svg/double-bond.svg"> </button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;"
+        id="btnTriple"> <img src="svg/triple-bond.svg"> </button> <button class="nav-item nav-link btn btn-toolbar"
+        style="width: 50px; height: 50px; border:none; font-size: 15px;" id="butane"> <img src="svg/cyclobutane.svg">
+      </button>
+
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;"
+        id="btnBenzene"> <img src="svg/benzene.svg"> </button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none; font-size: 15px;"
+        id="btnCycleHexan"> <img src="svg/cyclohexane.svg"> </button>
+
       <div class="dropdown">
         <button class="nav-item nav-link btn" type="button" id="dropdownMenu1" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="width: 50px; height: 50px; border:none; font-size: 15px; ">C</button>
+          aria-haspopup="true" aria-expanded="false"
+          style="width: 50px; height: 50px; border:none; font-size: 15px; ">C</button>
         <div class="dropdown-menu ">
           <div class="row">
             <div class="col-12" style="width:280px">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="row" class="btn btnChemicalElement" style="width: 50px; height: 50px; border:none;">H</th>
+                    <th scope="row" class="btn btnChemicalElement" style="width: 50px; height: 50px; border:none;">H
+                    </th>
                     <th class="btn btnChemicalElement" style="width: 50px; height: 50px; border:none">F</th>
                     <th class="btn btnChemicalElement" style="width: 50px; height: 50px; border:none">O</th>
                     <th class="btn btnChemicalElement" id="carbon" style="width: 50px; height: 50px; border:none">C</th>
@@ -70,7 +85,8 @@
 
         </div>
       </div>
-      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none" id="btnEraser"><img src="imgs/eraserIcon.png" alt=""></button>
+      <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none"
+        id="btnEraser"><img src="imgs/eraserIcon.png" alt=""></button>
     </div>
   </nav>
 
@@ -78,10 +94,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12 d-flex justify-content-center mt-2">
-        <canvas id="canvas" width="700px" height="500px" style="border: 1px solid ";>
+        <canvas id="canvas" width="700px" height="500px" style="border: 1px solid " ;>
 
         </canvas>
-        
+
       </div>
 
     </div>

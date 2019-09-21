@@ -1,22 +1,22 @@
 'use strict';
 import MouseAction from "./scripts/components/MouseAction";
-import { drawSimple, drawDuo, drawTriple, drawCicloButane, erase, drawCarbon } from './scripts/functions/ligacoes';
+import { drawSimple, drawDuo, drawTriple, drawCicloButane, erase, drawCarbon, drawBenzene, drawCycleHexan } from './scripts/functions/ligacoes';
 
 let mouse = new MouseAction();
 let ctx = $("#canvas")[0].getContext('2d');
 
 
 
-$(".btn-toolbar").click(function() {
+$(".btn-toolbar").click(function () {
     mouse.click(this.id);
 });
 
-$("#carbon").click(function() {
+$("#carbon").click(function () {
     mouse.click(this.id);
 });
 
 
-$("#canvas").click(function(event) {
+$("#canvas").click(function (event) {
     console.log(mouse.currentClick);
     if (mouse.currentClick == "btnSimple") {
         drawSimple(ctx, event.offsetX, event.offsetY);
@@ -31,10 +31,18 @@ $("#canvas").click(function(event) {
         drawCicloButane(ctx, event.offsetX, event.offsetY);
         mouse.saveConnections("simple", event.offsetX, event.offsetY);
     }
+    else if (mouse.currentClick == "btnCycleHexan") {
+        drawCycleHexan(ctx, event.offsetX, event.offsetY);
+        mouse.saveConnections("cycleHexan", event.offsetX, event.offsetY);
+    }
+    else if (mouse.currentClick == "btnBenzene") {
+        drawBenzene(ctx, event.offsetX, event.offsetY);
+        mouse.saveConnections("benzene", event.offsetX, event.offsetY);
+    }
     else if (mouse.currentClick === "carbon") {
         drawCarbon(ctx, event.offsetX, event.offsetY);
     }
-     else if (mouse.currentClick == "btnEraser") {
+    else if (mouse.currentClick == "btnEraser") {
         erase(ctx);
     }
 });

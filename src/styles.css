@@ -1,0 +1,66 @@
+.navbar {
+    background-color: #342741;
+    padding: 2px;
+    padding-left: 20px;
+}
+.navbar .row{
+    width: -webkit-fill-available;
+}
+.options{
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 5px;
+    max-width: 150px;
+    padding: 5px;
+    background-color: #2E213B
+}
+.options button {
+    border: none;
+    border-radius: 2px;
+    margin: 2px;
+    background-color: gray;
+}
+.options img {
+    width: 40px;
+    height: 40px;    
+}
+
+.dropdown-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+.bond{
+    
+    max-width: -webkit-fill-available;
+
+}
+.benzene{
+    
+    max-width: auto;
+
+}
+.cycle{
+    
+    max-width: auto;
+
+}
+.bond-item button{
+    background-color: white;
+
+}
+
+.structure{
+    
+}
+/* .dropdown-item.active, .dropdown-item:active {
+    background-color: white;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: white;
+} */
+
+.dropdown-menu button{
+    background-color: white;
+}
