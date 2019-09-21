@@ -11,6 +11,7 @@ export default class MouseAction {
     click(btn) {
         this.historyClick.unshift(btn);
         this.currentClick = btn;
+        console.log(this.currentClick);
     }
 
     saveConnections(name, x, y) {

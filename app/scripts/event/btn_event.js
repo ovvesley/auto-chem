@@ -8,7 +8,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var mouse = new _MouseAction["default"]();
 var ctx = $("#canvas")[0].getContext('2d');
-$(".btn-toolbar").click(function (event) {
+$(".btn-toolbar").click(function () {
+  mouse.click(this.id);
+});
+$("#carbon").click(function () {
   mouse.click(this.id);
 });
 $("#canvas").click(function (event) {
@@ -26,6 +29,8 @@ $("#canvas").click(function (event) {
   } else if (mouse.currentClick == "butane") {
     (0, _ligacoes.drawCicloButane)(ctx, event.offsetX, event.offsetY);
     mouse.saveConnections("simple", event.offsetX, event.offsetY);
+  } else if (mouse.currentClick === "carbon") {
+    (0, _ligacoes.drawCarbon)(ctx, event.offsetX, event.offsetY);
   } else if (mouse.currentClick == "btnEraser") {
     (0, _ligacoes.erase)(ctx);
   }

@@ -8,6 +8,7 @@ exports.drawTriple = drawTriple;
 exports.drawDuo = drawDuo;
 exports.drawCicloButane = drawCicloButane;
 exports.erase = erase;
+exports.drawCarbon = drawCarbon;
 
 function drawSimple(ctx, valorX, valorY) {
   ctx.beginPath();
@@ -54,4 +55,14 @@ function drawCicloButane(ctx, x, y) {
 
 function erase(ctx) {
   ctx.clearRect(0, 0, 800, 600);
+}
+
+function drawCarbon(ctx, x, y) {
+  ctx.beginPath(); //arc(x, y, ray, initialAngle, lastAngle);
+
+  ctx.arc(x, y, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = "#000000";
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }

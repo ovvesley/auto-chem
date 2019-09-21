@@ -29,6 +29,7 @@ function () {
     value: function click(btn) {
       this.historyClick.unshift(btn);
       this.currentClick = btn;
+      console.log(this.currentClick);
     }
   }, {
     key: "saveConnections",

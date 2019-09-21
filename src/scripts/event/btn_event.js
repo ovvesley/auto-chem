@@ -1,13 +1,17 @@
 'use strict';
 import MouseAction from "./scripts/components/MouseAction";
-import { drawSimple, drawDuo, drawTriple, drawCicloButane, erase } from './scripts/functions/ligacoes';
+import { drawSimple, drawDuo, drawTriple, drawCicloButane, erase, drawCarbon } from './scripts/functions/ligacoes';
 
 let mouse = new MouseAction();
 let ctx = $("#canvas")[0].getContext('2d');
 
 
 
-$(".btn-toolbar").click(function(event) {
+$(".btn-toolbar").click(function() {
+    mouse.click(this.id);
+});
+
+$("#carbon").click(function() {
     mouse.click(this.id);
 });
 
@@ -26,7 +30,11 @@ $("#canvas").click(function(event) {
     } else if (mouse.currentClick == "butane") {
         drawCicloButane(ctx, event.offsetX, event.offsetY);
         mouse.saveConnections("simple", event.offsetX, event.offsetY);
-    } else if (mouse.currentClick == "btnEraser") {
+    }
+    else if (mouse.currentClick === "carbon") {
+        drawCarbon(ctx, event.offsetX, event.offsetY);
+    }
+     else if (mouse.currentClick == "btnEraser") {
         erase(ctx);
     }
 });
