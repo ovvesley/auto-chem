@@ -4,11 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.drawSimple = drawSimple;
-exports.drawTriple = drawTriple;
 exports.drawDuo = drawDuo;
 exports.drawCicloButane = drawCicloButane;
 exports.erase = erase;
 exports.drawCarbon = drawCarbon;
+exports.drawCycleHexan = drawCycleHexan;
+exports.drawBenzeno = drawBenzeno;
 
 function drawSimple(ctx, valorX, valorY) {
   ctx.beginPath();
@@ -65,4 +66,35 @@ function drawCarbon(ctx, x, y) {
   ctx.fill();
   ctx.stroke();
   ctx.closePath();
+}
+
+function drawCycleHexan(ctx, Xcenter, Ycenter) {
+  var numberOfSides = 6,
+      size = 40;
+  ctx.beginPath();
+  ctx.moveTo(Xcenter + size * Math.cos(0), Ycenter + size * Math.sin(0));
+
+  for (var i = 1; i <= numberOfSides; i += 1) {
+    ctx.lineTo(Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+  }
+
+  ctx.strokeStyle = "#000000";
+  ctx.lineWidth = 1;
+  ctx.stroke();
+}
+
+function drawBenzeno(ctx, Xcenter, Ycenter) {
+  var numberOfSides = 6,
+      size = 40;
+  ctx.beginPath();
+  ctx.arc(Xcenter, Ycenter, size / 2, 0, 2 * Math.PI);
+  ctx.moveTo(Xcenter + size * Math.cos(0), Ycenter + size * Math.sin(0));
+
+  for (var i = 1; i <= numberOfSides; i += 1) {
+    ctx.lineTo(Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+  }
+
+  ctx.strokeStyle = "#000000";
+  ctx.lineWidth = 1;
+  ctx.stroke();
 }
