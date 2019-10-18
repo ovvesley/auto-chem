@@ -15,8 +15,6 @@ $("#carbon").click(function () {
   mouse.click(this.id);
 });
 $("#canvas").click(function (event) {
-  console.log(mouse.currentClick);
-
   if (mouse.currentClick == "btnSimple") {
     (0, _ligacoes.drawSimple)(ctx, event.offsetX, event.offsetY);
     mouse.saveConnections("simple", event.offsetX, event.offsetY);

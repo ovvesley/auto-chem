@@ -17,7 +17,7 @@ $("#carbon").click(function () {
 
 
 $("#canvas").click(function (event) {
-    console.log(mouse.currentClick);
+   
     if (mouse.currentClick == "btnSimple") {
         drawSimple(ctx, event.offsetX, event.offsetY);
         mouse.saveConnections("simple", event.offsetX, event.offsetY);
