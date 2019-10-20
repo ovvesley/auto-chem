@@ -22,7 +22,7 @@
     
   }
   .sidebar-navigation ul li {
-    padding: 28px 0;
+    padding: 5px 0;
     cursor: pointer;
     transition: all ease-out 120ms;
   }
@@ -64,11 +64,18 @@
   
 
 .btn-toolbar{
-  width: 100px;
-  height: 80px;  
-  margin-bottom: -50px;
+  width: 100%;
+    
   padding: 5px;  
 }
-.sidebar-navigation ul li i{
-  font-size: 30px;
+.btn-toolbar ul li img{
+  
+ 
+  padding: 5px;
+}
+.sidebar-navigation ul li button{
+  font-size: 10px;
+  margin: 0px;
+  width: 100%;
+  height: 20px;
 }

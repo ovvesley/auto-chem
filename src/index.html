@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auto Chem</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../node_modules/mdbootstrap/css/mdb.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link href="./css/sidebar.css" rel="stylesheet" />
+  </head>
+  <script>
+    window.$ = window.jQuery = require("jquery");
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 
-<head>
-  <meta charset="UTF-8">
-  <title>Auto Chem</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../node_modules/mdbootstrap/css/mdb.min.css">
-  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-  <link href="./css/sidebar.css" rel="stylesheet">
- 
-</head>
-<script>
-  window.$ = window.jQuery = require('jquery');
-</script>
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    button {
+      font-family: "Righteous", cursive;
+    }
 
-  button {
-    font-family: 'Righteous', cursive;
+    .btElementQuimic {
+      font-family: "Righteous", cursive;
+    }
+  </style>
 
-  }
-
-  
-
-  .btElementQuimic {
-    font-family: 'Righteous', cursive;
-  }
-</style>
-
-<body>
-
-  
-  <!-- <nav class="navbar navbar-expand navbar-light bg-light">
+  <body>
+    <!-- <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav mx-auto">
       <button class="nav-item nav-link btn btn-toolbar" style="width: 50px; height: 50px; border:none"
         id="btnPointer"><img src="imgs/pointerIcon.png" alt=""></button>
@@ -92,8 +91,8 @@
         id="btnEraser"><img src="imgs/eraserIcon.png" alt=""></button>
     </div>
   </nav> -->
-  <nav class="sidebar-navigation">
-    <ul>
+    <nav class="sidebar-navigation">
+      <!-- <ul>
       <li class="active">
          <img class="btn-toolbar" id="btnSimple" style="filter: invert(1);" src="./svg/single-bond.svg" alt="">
       </li>
@@ -121,68 +120,99 @@
       </li>
       
       </li>      
-    </ul>
-  </nav>
+    </ul> -->
+    <ul id="yes">
+        <li><img src="./svg/single-bond.svg"  id="single" value="single" onclick="bondType = 'single';">SingleBond</img></li>
+        <li><img src="./svg/double-bond.svg" id="double" value="double" onclick="bondType = 'double';">DoubleBond</img></li>
+        <li><img src="./svg/triple-bond.svg" id="triple" value="triple" onclick="bondType = 'triple';">TripleBond</img></li>
+        <li><img src="./svg/benzene.svg" id="benzene" value="benzene" onclick="bondType = 'benzene';">Benzene</img></li>
+        <li><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Funcoes</button>
+          <div id="demo" class="collapse">
+           <ul>
+              <li><button class="btn" id="ketone" value="ketone" onclick="bondType = 'ketone';">Ketone</button></li>
+              <li><button class="btn" id="primaryAmine" value="primaryAmine" onclick="bondType = 'primaryAmine';">1ºAmine</button></li>
+              <li><button class="btn" id="secondaryAmine" value="secondaryAmine" onclick="bondType = 'secondaryAmine';">2ºAmine</button></li>
+              <li><button class="btn" id="tertiaryAmine" value="tertiaryAmine" onclick="bondType = 'tertiaryAmine';">3ºAmine</button></li>
+              <li><button class="btn" id="alcohol" value="alcohol" onclick="bondType = 'alcohol';">Alcohol</button></li>
+              <li><button class="btn" id="chlorine" value="chlorine" onclick="bondType = 'chlorine';">Chloride</button></li>
+              <li><button class="btn" id="fluorine" value="fluorine" onclick="bondType = 'fluorine';">Flouride</button></li>
+              <li><button class="btn" id="bromine" value="bromine" onclick="bondType = 'bromine';">Bromide</button></li>
+           </ul>
+          </div></li>
 
+        
+        <li><img src="svg/cyclohexane.svg"  id="cyclohexane" value="cyclohexane" onclick="bondType = 'cyclohexane';">Cyclohexane</img>
+        
+      
+      <!-- </select> -->
+      </ul>
+    </nav>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modalExemplo"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Entre com uma palavra</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Entre com uma palavra
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fechar"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <input id="textInput" class="form-control" />
           </div>
-          <div class="modal-footer">         
-            <button type="button" class="btn btn-primary"  data-dismiss="modal">OK</button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              OK
+            </button>
           </div>
         </div>
       </div>
     </div>
 
- 
-<div class="text-right" style="position: absolute; right: 0;">
-    <button class="btn"> <i class="fa fa-floppy-o fa-lg"></i> </button>
-
-</div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
+    <div class="text-right" style="position: absolute; right: 0;">
+      <button class="btn"><i class="fa fa-floppy-o fa-lg"></i></button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
           <div class="row">
-              <div class="col-12">
-                  <div class="card">
-                      <div class="card-body pb-0 text-center">
-                          <canvas id="canvas" width="1000" height="700"></canvas>
-                      </div>
-                  </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body pb-0 text-center">
+                  <canvas id="canvas" width="1000" height="700"></canvas>
+                </div>
               </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-  
-  </div>
+    </div>
 
+    <!--Popper, Bootstrap -->
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/mdbootstrap/js/mdb.min.js"></script>
 
+    <!-- <script src="js/settings.js"></script> -->
 
+    <!-- <script src="scripts/event/btn_event.js"></script> -->
 
-  
-
-
-
-
-  <!--Popper, Bootstrap -->
-  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../node_modules/mdbootstrap/js/mdb.min.js"></script>
-
-  <script src="js/settings.js"></script>
-
-  <script src="scripts/event/btn_event.js"></script>
-</body>
-
+    <script src="scripts/VisChemJS/bundle.js"></script>
+   
+  </body>
 </html>
