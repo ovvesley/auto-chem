@@ -1,48 +1,20 @@
-'use strict';
-import MouseAction from "./scripts/components/MouseAction";
-import { drawSimple, drawDuo, drawTriple, drawCicloButane, erase, drawCarbon, drawBenzene, drawCycleHexan } from './scripts/functions/ligacoes';
-
-let mouse = new MouseAction();
-let ctx = $("#canvas")[0].getContext('2d');
-
-
-
-$(".btn-toolbar").click(function () {
-    mouse.click(this.id);
+import { erase } from "./scripts/functions/ligacoes";
+import { app, remote } from "electron";
+const userDataPath = app ? app.getPath("home") : remote.app.getPath("home");
+$("#btnEraser").click(function(event) {
+  $("#canvas")[0]
+    .getContext("2d")
+    .clearRect(0, 0, 2000, 2000);
 });
+$("#btnSave").click(function(event) {
+  const fs = require("fs");
+  const url = $("#canvas")[0].toDataURL();
+  const base64Data = url.replace(/^data:image\/png;base64,/, "");
 
-$("#carbon").click(function () {
-    mouse.click(this.id);
-});
-
-
-$("#canvas").click(function (event) {
-   
-    if (mouse.currentClick == "btnSimple") {
-        drawSimple(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("simple", event.offsetX, event.offsetY);
-    } else if (mouse.currentClick == "btnDuo") {
-        drawDuo(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("duo", event.offsetX, event.offsetY);
-    } else if (mouse.currentClick == "btnTriple") {
-        drawTriple(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("triple", event.offsetX, event.offsetY);
-    } else if (mouse.currentClick == "butane") {
-        drawCicloButane(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("simple", event.offsetX, event.offsetY);
-    }
-    else if (mouse.currentClick == "btnCycleHexan") {
-        drawCycleHexan(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("cycleHexan", event.offsetX, event.offsetY);
-    }
-    else if (mouse.currentClick == "btnBenzene") {
-        drawBenzene(ctx, event.offsetX, event.offsetY);
-        mouse.saveConnections("benzene", event.offsetX, event.offsetY);
-    }
-    else if (mouse.currentClick === "carbon") {
-        drawCarbon(ctx, event.offsetX, event.offsetY);
-    }
-    else if (mouse.currentClick == "btnEraser") {
-        erase(ctx);
-    }
+  console.log("Arquivo salvo em: " + userDataPath);
+  fs.writeFile(userDataPath + "/auto-chem.png", base64Data, "base64", function(
+    err
+  ) {
+    console.log(err);
+  });
 });

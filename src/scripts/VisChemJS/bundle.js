@@ -611,18 +611,7 @@
         }
     
       }
-      context.beginPath();
-      context.fillStyle = 'white';
-      context.fillRect(50, 20, 110, 100);
-      context.clearRect(50, 20, 110, 100);
-      // context.fillBox();
-      // context.stroke();
-      context.beginPath();
-      context.fillStyle = 'black';
-      context.font="20px Georgia";
-      // context.fillText(`Charge = -${getStructureCharge()}`, 50 ,50);
-      // context.fillText('yes');
-      context.stroke();
+     
       console.log(getStructureCharge());
     }
     

@@ -1,41 +1,20 @@
-'use strict';
-
-var _MouseAction = _interopRequireDefault(require("./scripts/components/MouseAction"));
+"use strict";
 
 var _ligacoes = require("./scripts/functions/ligacoes");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _electron = require("electron");
 
-var mouse = new _MouseAction["default"]();
-var ctx = $("#canvas")[0].getContext('2d');
-$(".btn-toolbar").click(function () {
-  mouse.click(this.id);
+var userDataPath = _electron.app ? _electron.app.getPath("home") : _electron.remote.app.getPath("home");
+$("#btnEraser").click(function (event) {
+  $("#canvas")[0].getContext("2d").clearRect(0, 0, 2000, 2000);
 });
-$("#carbon").click(function () {
-  mouse.click(this.id);
-});
-$("#canvas").click(function (event) {
-  if (mouse.currentClick == "btnSimple") {
-    (0, _ligacoes.drawSimple)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("simple", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "btnDuo") {
-    (0, _ligacoes.drawDuo)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("duo", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "btnTriple") {
-    (0, _ligacoes.drawTriple)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("triple", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "butane") {
-    (0, _ligacoes.drawCicloButane)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("simple", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "btnCycleHexan") {
-    (0, _ligacoes.drawCycleHexan)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("cycleHexan", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "btnBenzene") {
-    (0, _ligacoes.drawBenzene)(ctx, event.offsetX, event.offsetY);
-    mouse.saveConnections("benzene", event.offsetX, event.offsetY);
-  } else if (mouse.currentClick === "carbon") {
-    (0, _ligacoes.drawCarbon)(ctx, event.offsetX, event.offsetY);
-  } else if (mouse.currentClick == "btnEraser") {
-    (0, _ligacoes.erase)(ctx);
-  }
+$("#btnSave").click(function (event) {
+  var fs = require("fs");
+
+  var url = $("#canvas")[0].toDataURL();
+  var base64Data = url.replace(/^data:image\/png;base64,/, "");
+  console.log("Arquivo salvo em: " + userDataPath);
+  fs.writeFile(userDataPath + "/auto-chem.png", base64Data, "base64", function (err) {
+    console.log(err);
+  });
 });
