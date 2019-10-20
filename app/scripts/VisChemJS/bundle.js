@@ -14,11 +14,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   // The module cache
 
   /******/
-  var installedModules = {}; // The require function
-
+  var installedModules = {};
   /******/
 
   /******/
+  // The require function
 
   /******/
 
@@ -33,9 +33,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /******/
       return installedModules[moduleId].exports;
       /******/
-    } // Create a new module (and put it into the cache)
-
+    }
     /******/
+    // Create a new module (and put it into the cache)
 
     /******/
 
@@ -51,56 +51,56 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       exports: {}
       /******/
 
-    }; // Execute the module function
-
+    };
     /******/
 
     /******/
+    // Execute the module function
 
     /******/
 
-    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); // Flag the module as loaded
-
+    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
     /******/
 
     /******/
+    // Flag the module as loaded
 
     /******/
 
-    module.l = true; // Return the exports of the module
-
+    module.l = true;
     /******/
 
     /******/
+    // Return the exports of the module
 
     /******/
 
     return module.exports;
     /******/
-  } // expose the modules object (__webpack_modules__)
-
+  }
   /******/
 
   /******/
 
   /******/
+  // expose the modules object (__webpack_modules__)
 
   /******/
 
 
-  __webpack_require__.m = modules; // expose the module cache
-
+  __webpack_require__.m = modules;
   /******/
 
   /******/
+  // expose the module cache
 
   /******/
 
-  __webpack_require__.c = installedModules; // define getter function for harmony exports
-
+  __webpack_require__.c = installedModules;
   /******/
 
   /******/
+  // define getter function for harmony exports
 
   /******/
 
@@ -124,11 +124,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
     /******/
 
-  }; // getDefaultExport function for compatibility with non-harmony modules
-
+  };
   /******/
 
   /******/
+  // getDefaultExport function for compatibility with non-harmony modules
 
   /******/
 
@@ -138,7 +138,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var getter = module && module.__esModule ?
     /******/
     function getDefault() {
-      return module["default"];
+      return module['default'];
     } :
     /******/
     function getModuleExports() {
@@ -146,37 +146,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
     /******/
 
-    __webpack_require__.d(getter, "a", getter);
+    __webpack_require__.d(getter, 'a', getter);
     /******/
 
 
     return getter;
     /******/
-  }; // Object.prototype.hasOwnProperty.call
-
+  };
   /******/
 
   /******/
+  // Object.prototype.hasOwnProperty.call
 
   /******/
 
 
   __webpack_require__.o = function (object, property) {
     return Object.prototype.hasOwnProperty.call(object, property);
-  }; // __webpack_public_path__
-
+  };
   /******/
 
   /******/
+  // __webpack_public_path__
 
   /******/
 
 
-  __webpack_require__.p = ""; // Load entry module and return exports
-
+  __webpack_require__.p = "";
   /******/
 
   /******/
+  // Load entry module and return exports
 
   /******/
 
@@ -208,7 +208,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       fillBox,
       snapshot,
       lastAtom;
-  var bondType = "single";
+  var bondType = 'single';
   var structure = [];
 
   function getStructureCharge() {
@@ -244,51 +244,47 @@ function (module, __webpack_exports__, __webpack_require__) {
       drawTripleBond(position);
     }
 
-    if (bondType === "ketone") {
+    if (bondType === 'ketone') {
       drawKetone(position);
     }
 
-    if (bondType === "primaryAmine") {
+    if (bondType === 'primaryAmine') {
       drawAmine(position);
     }
 
-    if (bondType === "secondaryAmine") {
+    if (bondType === 'secondaryAmine') {
       drawSecondaryAmine(position);
     }
 
-    if (bondType === "tertiaryAmine") {
+    if (bondType === 'tertiaryAmine') {
       drawTertiaryAmine(position);
     }
 
-    if (bondType === "alcohol") {
+    if (bondType === 'alcohol') {
       drawAlcohol(position);
     }
 
-    if (bondType === "chlorine") {
+    if (bondType === 'chlorine') {
       drawHalogen(position);
     }
 
-    if (bondType === "fluorine") {
+    if (bondType === 'fluorine') {
       drawHalogen(position);
     }
 
-    if (bondType === "bromine") {
+    if (bondType === 'bromine') {
       drawHalogen(position);
     }
 
-    if (bondType === "cyclohexane") {
+    if (bondType === 'cyclohexane') {
       drawCyclohexane(position);
     }
 
-    if (bondType === "cyclobutane") {
-      drawCyclobutane(position);
-    }
-
-    if (bondType === "imine") {
+    if (bondType === 'imine') {
       drawImine(position);
     }
 
-    if (bondType === "benzene") {
+    if (bondType === 'benzene') {
       drawBenzene(position);
     }
   }
@@ -306,7 +302,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       context.lineTo(Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
       var ring1 = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("C", 1, 0, {
+      ]('C', 1, 0, {
         x: Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides),
         y: Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides)
       }); // let atom1 = [ring1, ring2, ring3, ring4, ring5, ring6];
@@ -337,7 +333,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       context.lineTo(Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
       var ring1 = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("C", 2, 0, {
+      ]('C', 2, 0, {
         x: Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides),
         y: Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides)
       }); // let atom1 = [ring1, ring2, ring3, ring4, ring5, ring6];
@@ -467,84 +463,80 @@ function (module, __webpack_exports__, __webpack_require__) {
     if (bondType === "single") {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("C", 4, 0, position);
+      ]('C', 4, 0, position);
     }
 
     if (bondType === "double") {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("C", 4, 0, position);
+      ]('C', 4, 0, position);
     }
 
     if (bondType === "triple") {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("C", 4, 0, position);
+      ]('C', 4, 0, position);
     }
 
-    if (bondType === "ketone") {
+    if (bondType === 'ketone') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("O", 1, 0, position);
+      ]('O', 1, 0, position);
     }
 
-    if (bondType === "primaryAmine") {
+    if (bondType === 'primaryAmine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("N", 1, 0, position);
+      ]('N', 1, 0, position);
     }
 
-    if (bondType === "secondaryAmine") {
+    if (bondType === 'secondaryAmine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("N", 2, 0, position);
+      ]('N', 2, 0, position);
     }
 
-    if (bondType === "tertiaryAmine") {
+    if (bondType === 'tertiaryAmine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("N", 3, 0, position);
+      ]('N', 3, 0, position);
     }
 
-    if (bondType === "alcohol") {
+    if (bondType === 'alcohol') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("O", 1, 0, position);
+      ]('O', 1, 0, position);
     }
 
-    if (bondType === "bromine") {
+    if (bondType === 'bromine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("Br", 1, 0, position);
+      ]('Br', 1, 0, position);
     }
 
-    if (bondType === "chlorine") {
+    if (bondType === 'chlorine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("Cl", 1, 0, position);
+      ]('Cl', 1, 0, position);
     }
 
-    if (bondType === "fluorine") {
+    if (bondType === 'fluorine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("F", 1, 0, position);
+      ]('F', 1, 0, position);
     }
 
-    if (bondType === "cyclohexane") {
+    if (bondType === 'cyclohexane') {
       return;
     }
 
-    if (bondType === "cyclobutane") {
-      return;
-    }
-
-    if (bondType === "imine") {
+    if (bondType === 'imine') {
       atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
       /* default */
-      ]("NH", 1, 0, position);
+      ]('NH', 1, 0, position);
     }
 
-    if (bondType === "benzene") {
+    if (bondType === 'benzene') {
       return;
     } // atom = new Atom('C', 4, 0, position);
 
@@ -557,7 +549,7 @@ function (module, __webpack_exports__, __webpack_require__) {
   function makeCarbon(position) {
     var atom = new __WEBPACK_IMPORTED_MODULE_0__atom__["a"
     /* default */
-    ]("C", 4, 0, position);
+    ]('C', 4, 0, position);
     structure.push(atom);
     console.log(structure);
     return atom;
@@ -574,7 +566,7 @@ function (module, __webpack_exports__, __webpack_require__) {
   function isAtomAtPos(pos) {
     for (var i = 0; i < positionsArray().length; i++) {
       if (pos.x <= positionsArray()[i].x + 25 && pos.x >= positionsArray()[i].x - 25 && pos.y <= positionsArray()[i].y + 25 && pos.y >= positionsArray()[i].y - 25) {
-        console.log("made it");
+        console.log('made it');
         lastAtom = structure[i];
         dragStartCoords = positionsArray()[i];
         return true;
@@ -588,30 +580,15 @@ function (module, __webpack_exports__, __webpack_require__) {
     dragging = true;
     dragStartCoords = getCanvasCoordinates(event);
 
-    if (bondType !== "cyclohexane" && bondType !== "benzene") {
+    if (bondType !== 'cyclohexane' && bondType !== 'benzene') {
       if (isAtomAtPos(dragStartCoords) === false) {
         makeCarbon(dragStartCoords);
       } else {
-        console.log("falsey value");
+        console.log('falsey value');
       }
     }
 
-    if (bondType === "cyclohexane" || bondType === "benzene") {
-      draw(getCanvasCoordinates(event));
-    } else {
-      // draw(getCanvasCoordinates(event));
-      takeSnapshot();
-    }
-
-    if (bondType !== "cyclobutane" && bondType !== "benzene") {
-      if (isAtomAtPos(dragStartCoords) === false) {
-        makeCarbon(dragStartCoords);
-      } else {
-        console.log("falsey value");
-      }
-    }
-
-    if (bondType === "cyclobutane" || bondType === "benzene") {
+    if (bondType === 'cyclohexane' || bondType === 'benzene') {
       draw(getCanvasCoordinates(event));
     } else {
       // draw(getCanvasCoordinates(event));
@@ -621,7 +598,7 @@ function (module, __webpack_exports__, __webpack_require__) {
 
   function drag(event) {
     if (dragging) {
-      if (bondType !== "cyclohexane" && bondType !== "benzene") {
+      if (bondType !== 'cyclohexane' && bondType !== 'benzene') {
         restoreSnapshot();
         var position = getCanvasCoordinates(event);
         draw(position);
@@ -632,7 +609,7 @@ function (module, __webpack_exports__, __webpack_require__) {
   function dragStop(event) {
     dragging = false;
 
-    if (bondType !== "cyclohexane" && bondType !== "benzene") {
+    if (bondType !== 'cyclohexane' && bondType !== 'benzene') {
       restoreSnapshot();
     }
 
@@ -640,21 +617,21 @@ function (module, __webpack_exports__, __webpack_require__) {
     var position = getCanvasCoordinates(event);
     var newAtom = makeAtom(position);
 
-    if (bondType !== "cyclohexane" && bondType !== "benzene") {
+    if (bondType !== 'cyclohexane' && bondType !== 'benzene') {
       if (isAtomAtPos(dragStartCoords)) {
         newAtom.attachAtom(lastAtom);
         lastAtom.attachAtom(newAtom);
       }
     }
 
-    if (bondType !== "cyclohexane" && bondType !== "benzene") {
+    if (bondType !== 'cyclohexane' && bondType !== 'benzene') {
       draw(position);
     }
 
     console.log(bondType);
 
-    if (bondType === "ketone") {
-      console.log("im in bro");
+    if (bondType === 'ketone') {
+      console.log('im in bro');
       context.beginPath(); //  context.arc(dragStopCoords.x, dragStopCoords.y + 10, 10, 0, 2*Math.pi);
 
       if (dragStopCoords.y >= dragStartCoords.y) {
@@ -668,7 +645,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "primaryAmine") {
+    if (bondType === 'primaryAmine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("NH2", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -680,7 +657,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "secondaryAmine") {
+    if (bondType === 'secondaryAmine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("NH", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -692,7 +669,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "tertiaryAmine") {
+    if (bondType === 'tertiaryAmine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("N", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -704,7 +681,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "alcohol") {
+    if (bondType === 'alcohol') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("OH", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -716,7 +693,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "chlorine") {
+    if (bondType === 'chlorine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("Cl", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -728,7 +705,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "bromine") {
+    if (bondType === 'bromine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("Br", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -740,7 +717,7 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "fluorine") {
+    if (bondType === 'fluorine') {
       if (dragStopCoords.y >= dragStartCoords.y) {
         context.font = "20px Georgia";
         context.fillText("F", dragStopCoords.x - 13, dragStopCoords.y + 18);
@@ -752,8 +729,8 @@ function (module, __webpack_exports__, __webpack_require__) {
       }
     }
 
-    if (bondType === "imine") {
-      console.log("im in bro");
+    if (bondType === 'imine') {
+      console.log('im in bro');
       context.beginPath(); //  context.arc(dragStopCoords.x, dragStopCoords.y + 10, 10, 0, 2*Math.pi);
 
       if (dragStopCoords.y >= dragStartCoords.y) {
@@ -768,14 +745,14 @@ function (module, __webpack_exports__, __webpack_require__) {
     }
 
     context.beginPath();
-    context.fillStyle = "white";
+    context.fillStyle = 'white';
     context.fillRect(50, 20, 110, 100);
     context.clearRect(50, 20, 110, 100); // context.fillBox();
     // context.stroke();
 
     context.beginPath();
-    context.fillStyle = "black";
-    context.font = "20px Georgia"; // context.fillText(`Charge = -${getStructureCharge()}`, 50, 50);
+    context.fillStyle = 'black';
+    context.font = "20px Georgia"; // context.fillText(`Charge = -${getStructureCharge()}`, 50 ,50);
     // context.fillText('yes');
 
     context.stroke();
@@ -784,63 +761,57 @@ function (module, __webpack_exports__, __webpack_require__) {
 
   function init() {
     canvas = document.getElementById("canvas");
-    context = canvas.getContext("2d");
-    context.strokeStyle = "black";
-    context.fillStyle = "black";
+    context = canvas.getContext('2d');
+    context.strokeStyle = 'black';
+    context.fillStyle = 'black';
     context.lineWidth = 4;
-    context.lineCap = "round";
+    context.lineCap = 'round';
     fillBox = document.getElementById("fillBox");
-    canvas.addEventListener("mousedown", dragStart, false);
-    canvas.addEventListener("mousemove", drag, false);
-    canvas.addEventListener("mouseup", dragStop, false);
+    canvas.addEventListener('mousedown', dragStart, false);
+    canvas.addEventListener('mousemove', drag, false);
+    canvas.addEventListener('mouseup', dragStop, false);
     document.getElementById("single").addEventListener("click", function () {
-      bondType = "single";
+      bondType = 'single';
     });
     document.getElementById("double").addEventListener("click", function () {
-      bondType = "double";
+      bondType = 'double';
     });
     document.getElementById("triple").addEventListener("click", function () {
-      bondType = "triple";
+      bondType = 'triple';
     });
     document.getElementById("ketone").addEventListener("click", function () {
-      bondType = "ketone";
+      bondType = 'ketone';
     });
     document.getElementById("primaryAmine").addEventListener("click", function () {
-      bondType = "primaryAmine";
+      bondType = 'primaryAmine';
     });
     document.getElementById("secondaryAmine").addEventListener("click", function () {
-      bondType = "secondaryAmine";
+      bondType = 'secondaryAmine';
     });
     document.getElementById("tertiaryAmine").addEventListener("click", function () {
-      bondType = "tertiaryAmine";
+      bondType = 'tertiaryAmine';
     });
     document.getElementById("alcohol").addEventListener("click", function () {
-      bondType = "alcohol";
+      bondType = 'alcohol';
     });
     document.getElementById("bromine").addEventListener("click", function () {
-      bondType = "bromine";
+      bondType = 'bromine';
     });
     document.getElementById("chlorine").addEventListener("click", function () {
-      bondType = "chlorine";
+      bondType = 'chlorine';
     });
     document.getElementById("fluorine").addEventListener("click", function () {
-      bondType = "fluorine";
+      bondType = 'fluorine';
     });
     document.getElementById("cyclohexane").addEventListener("click", function () {
-      bondType = "cyclohexane";
-    });
-    document.getElementById("cyclobutane").addEventListener("click", function () {
-      bondType = "cyclobutane";
-    });
-    document.getElementById("imine").addEventListener("click", function () {
-      bondType = "imine";
+      bondType = 'cyclohexane';
     });
     document.getElementById("benzene").addEventListener("click", function () {
-      bondType = "benzene";
+      bondType = 'benzene';
     });
   }
 
-  window.addEventListener("load", init, false);
+  window.addEventListener('load', init, false);
   /***/
 },
 /* 1 */
@@ -884,6 +855,4 @@ function (module, __webpack_exports__, __webpack_require__) {
 
   __webpack_exports__["a"] = Atom;
   /***/
-}
-/******/
-]);
+}]);

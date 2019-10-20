@@ -121,31 +121,161 @@
       
       </li>      
     </ul> -->
-    <ul id="yes">
-        <li><img src="./svg/single-bond.svg"  id="single" value="single" onclick="bondType = 'single';">SingleBond</img></li>
-        <li><img src="./svg/double-bond.svg" id="double" value="double" onclick="bondType = 'double';">DoubleBond</img></li>
-        <li><img src="./svg/triple-bond.svg" id="triple" value="triple" onclick="bondType = 'triple';">TripleBond</img></li>
-        <li><img src="./svg/benzene.svg" id="benzene" value="benzene" onclick="bondType = 'benzene';">Benzene</img></li>
-        <li><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Funcoes</button>
-          <div id="demo" class="collapse">
-           <ul>
-              <li><button class="btn" id="ketone" value="ketone" onclick="bondType = 'ketone';">Ketone</button></li>
-              <li><button class="btn" id="primaryAmine" value="primaryAmine" onclick="bondType = 'primaryAmine';">1ºAmine</button></li>
-              <li><button class="btn" id="secondaryAmine" value="secondaryAmine" onclick="bondType = 'secondaryAmine';">2ºAmine</button></li>
-              <li><button class="btn" id="tertiaryAmine" value="tertiaryAmine" onclick="bondType = 'tertiaryAmine';">3ºAmine</button></li>
-              <li><button class="btn" id="alcohol" value="alcohol" onclick="bondType = 'alcohol';">Alcohol</button></li>
-              <li><button class="btn" id="chlorine" value="chlorine" onclick="bondType = 'chlorine';">Chloride</button></li>
-              <li><button class="btn" id="fluorine" value="fluorine" onclick="bondType = 'fluorine';">Flouride</button></li>
-              <li><button class="btn" id="bromine" value="bromine" onclick="bondType = 'bromine';">Bromide</button></li>
-           </ul>
-          </div></li>
+      <ul id="yes">
+        <!-- <li><button id="benzene" value="benzene" onclick="bondType = 'benzene';">Benzene</button></li> -->
+        <li class="btn">
+          <img
+            style="filter:invert(1); width:100%"
+            src="./svg/single-bond.svg"
+            id="single"
+            value="single"
+            onclick="bondType = 'single';"
+          />
+          SingleBond
+        </li>
+        <li class="btn">
+          <img
+            style="filter:invert(1); width:100%"
+            src="./svg/double-bond.svg"
+            id="double"
+            value="double"
+            onclick="bondType = 'double';"
+          />
+          DoubleBond
+        </li>
+        <li class="btn">
+          <img
+            style="filter:invert(1); width:100%"
+            src="./svg/triple-bond.svg"
+            id="triple"
+            value="triple"
+            onclick="bondType = 'triple';"
+          />
+          TripleBond
+        </li>
 
-        
-        <li><img src="svg/cyclohexane.svg"  id="cyclohexane" value="cyclohexane" onclick="bondType = 'cyclohexane';">Cyclohexane</img>
-        
-      
-      <!-- </select> -->
+        <li>
+          <button
+            type="button"
+            class="btn btn-info"
+            data-toggle="collapse"
+            data-target="#demo"
+          >
+            Funcoes
+          </button>
+          <div id="demo" class="collapse">
+            <ul>
+              <li>
+                <button
+                  class="btn"
+                  id="ketone"
+                  value="ketone"
+                  onclick="bondType = 'ketone';"
+                >
+                  Ketone
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="primaryAmine"
+                  value="primaryAmine"
+                  onclick="bondType = 'primaryAmine';"
+                >
+                  1ºAmine
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="secondaryAmine"
+                  value="secondaryAmine"
+                  onclick="bondType = 'secondaryAmine';"
+                >
+                  2ºAmine
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="tertiaryAmine"
+                  value="tertiaryAmine"
+                  onclick="bondType = 'tertiaryAmine';"
+                >
+                  3ºAmine
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="alcohol"
+                  value="alcohol"
+                  onclick="bondType = 'alcohol';"
+                >
+                  Alcohol
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="chlorine"
+                  value="chlorine"
+                  onclick="bondType = 'chlorine';"
+                >
+                  Chloride
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="fluorine"
+                  value="fluorine"
+                  onclick="bondType = 'fluorine';"
+                >
+                  Flouride
+                </button>
+              </li>
+              <li>
+                <button
+                  class="btn"
+                  id="bromine"
+                  value="bromine"
+                  onclick="bondType = 'bromine';"
+                >
+                  Bromide
+                </button>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="btn">
+          <img
+            style="filter:invert(1); width:100%"
+            src="./svg/benzene.svg"
+            id="benzene"
+            value="benzene"
+            onclick="bondType = 'benzene';"
+          />
+          Benzene
+        </li>
+
+        <li class="btn">
+          <img
+            style="filter:invert(1); width:100%"
+            src="svg/cyclohexane.svg"
+            id="cyclohexane"
+            value="cyclohexane"
+            onclick="bondType = 'cyclohexane';"
+          />
+          Cyclohex
+        </li>
+
+        <!-- </select> -->
       </ul>
+      <li>
+          
+      </li>
     </nav>
 
     <!-- Modal -->
@@ -211,8 +341,8 @@
     <!-- <script src="js/settings.js"></script> -->
 
     <!-- <script src="scripts/event/btn_event.js"></script> -->
-
+    <!-- <script src="scripts/VisChemJS/js/atom.js"></script>
+    <script src="scripts/VisChemJS/js/main.js"></script> -->
     <script src="scripts/VisChemJS/bundle.js"></script>
-   
   </body>
 </html>
