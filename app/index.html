@@ -282,6 +282,15 @@
           <!-- <i class="" style="font-size: 50; color: '#fff'"></i> -->
         </button>
       </li>
+      <li>
+        <button
+          class=" fa fa-info fa-lg btn" 
+          data-toggle="modal" 
+          data-target="#modalInfo"
+          style="width:90%;  height: 40px; background-color: #fff; border:none "
+        >
+        </button>
+      </li>
     </nav>
 
     <!-- Modal -->
@@ -315,6 +324,35 @@
             <button type="button" class="btn btn-primary" data-dismiss="modal">
               OK
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Informações</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              O auto-chem vem para oferecer uma opção de estudo e de formulação de questões de quimíca orgânica. <br>
+              COMO USAR: <br>
+              O manejo é simples. O usuário pode escolher em nosso menu lateral, encontrado no lado esquerdo, as opções para formar compostos químicos. <br>
+              Dentre as opções temos as ligações simples, duplas e triplas e as principais funções orgânicas. <br>
+              Se o usuário preferir, pode salvar o projeto em png, clicando no canto superior direito, no ícone com formato de disquete. <br>
+              O App foi feito em Electron e está disponível no github<br>
+              Alunos responsáveis: <br>
+              Wesley Ferreira<br>
+              Gabriel Dias <br>
+              Gabriel Amaral <br>
+            </h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
